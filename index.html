@@ -40,7 +40,7 @@
 
     <p>
     <div class="w3-container">
-        <button class="w3-btn" onclick=alert("hello")>Turn On Phonetics</button>
+        <input type="button" id="btn_toggle_phonetics" class="w3-btn" onclick=myFunction() value="Toggle Phonetics" />
         <button class="w3-btn" onclick=mandarinspot.showInline("hidden")>Hide Phonetics</button>
         
     </div>
@@ -92,6 +92,16 @@
             inline: true,
         });
     </script>
+
+<script>
+function myFunction() {
+    alert("inside my function");
+  var element = document.getElementById("btn_toggle_phonetics");
+  element.value="changed button";
+}
+</script>
+
+    </body>
 </body>
 
 </html>
