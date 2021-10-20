@@ -39,27 +39,11 @@
 
 
     <p>
-    <div id="chinesetext" class="w3-container">Chapter 1 - happy family
-        Father - Ah Ming
-
-        阿明
-
-        Mother - mei hua
-        美花
-
-        Daughter - qing li
-        晴力
-
-        很多笑声在大家里。 妈妈， 爸爸和女儿 在吃吃喝喝。妈妈做的菜很好吃。美花很爱她的家人。天天都有好吃的东西。
-        阿明不是很高。他是商人。他工作很长时间。他回来的时侯， 他给女儿一个苹果。
-        晴力是十五岁。她喜欢踢足球， 不喜欢学习。
-
-
-        妈妈要晴力去大学。她希望晴力可以做好的工作。
-        爸爸要晴力帮助他在商店。
+    <div class="w3-container">
+        <button class="w3-btn" onclick=mandarinspot.showInline('visible')>Turn On Phonetics</button>
+        <button class="w3-btn" onclick=mandarinspot.showInline("hidden")>Hide Phonetics</button>
+        
     </div>
-
-
     <div id="chinesetext" class="w3-container">
 
         很久以前
@@ -109,9 +93,10 @@
 
     <script src="//mandarinspot.com/static/mandarinspot.min.js" charset="UTF-8"></script>
     <script>
-        mandarinspot.annotate('#chinesetext', {
+        mandarinspot.annotate(, {
             phonetic: 'pinyin',
-            show: true
+            show: true,
+            inline: true,
         });
     </script>
 </body>
