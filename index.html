@@ -25,12 +25,12 @@
                 <a href="#" class="w3-bar-item w3-button w3-hover-amber">HSK1</a>
                 <a href="#" class="w3-bar-item w3-button w3-hover-amber">HSK2</a>
                 <a href="#" class="w3-bar-item w3-button w3-hover-amber">HSK3</a>
-            
+
             </div>
         </div>
 
     </div>
-    
+
 
 </head>
 
@@ -40,9 +40,9 @@
 
     <p>
     <div class="w3-container">
-        <input type="button" id="btn_toggle_phonetics" class="w3-btn" onclick=togglePhonetics() value="Show PinYin" />
+        <input type="button" id="btn_toggle_phonetics" class="w3-btn" onclick=togglePhonetics() value="Hide PinYin" />
         <button class="w3-btn" onclick=mandarinspot.showInline("hidden")>Hide Phonetics</button>
-        
+
     </div>
     <div id="chinesetext" class="w3-container">Story
 
@@ -93,28 +93,30 @@
         });
     </script>
 
-<script>
-function togglePhonetics() {
-    alert("inside my function");
-  var element = document.getElementById("btn_toggle_phonetics");
-let btnValue = element.value;
-alert("button value is"+ btnValue);
-const showPinyinText = "Show PinYin";
-const hidePinyinText = "Hide PinYin";
+    <script>
+        function togglePhonetics() {
+            //alert("inside my function");
+            var element = document.getElementById("btn_toggle_phonetics");
+            let btnValue = element.value;
+            const showPinyinText = "Show PinYin";
+            const hidePinyinText = "Hide PinYin";
 
-if (btnValue==showPinyinText){
-    element.value=hidePinyinText;
-    mandarinspot.showInline("visible");
-} else {
-    element.value=showPinyinText;
-    mandarinspot.showInline("hide");
-}
+            //alert("button value is " + btnValue);
+            
 
-  
-}
-</script>
+            if (btnValue === showPinyinText) {
+                element.value = hidePinyinText;
+                mandarinspot.showInline("visible");
+            } else {
+                element.value = showPinyinText;
+                mandarinspot.showInline("hidden");
+            }
 
-    </body>
+
+        }
+    </script>
+
+</body>
 </body>
 
 </html>
