@@ -1,0 +1,10 @@
+.Logo {
+    width: 200px;
+  }
+
+.Center {
+    margin: auto;
+    width: 50%;
+    border-color: black;
+    border: 5px;
+}
