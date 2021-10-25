@@ -1,0 +1,140 @@
+<html>
+<title>read chinese</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-amber.css">
+<link rel="stylesheet" href="src/app.css">
+
+<body>
+
+
+
+    <p>
+    <div class="w3-container">
+        <input type="button" id="btn_toggle_phonetics" class="w3-btn w3-amber w3-round-large" onclick=togglePhonetics()
+            value="Hide PinYin" />
+
+    </div>
+
+    <div id="chinesetext" class="w3-panel w3-card-4" style="width:60%;align-content: center;margin-left: auto;margin-right: auto;">
+        <div class="w3-row w3-panel">
+            <div class="w3-amber" style="text-align: center;">
+                <h1>妈妈很喜欢看电视</h1>
+            </div>
+        </div>
+        <div class="w3-row w3-panel">
+            <div class="w3-container w3-cell w3-mobile" style="width: 50%">
+                <img class="w3-image" src=""/>
+            </div>
+
+            <div class="w3-container w3-cell w3-mobile w3-cell-middle" style="width: 50%">
+
+
+                <p>每天妈妈看电视。她吃饭很早因为中午有她喜欢的电视节目。有兴趣看电视。 电视的作用对妈妈很认真。她自己说话，自己笑。别人都认为她很奇怪。有时候她忘记那个电影不真的。起床就看新闻。 有一天， 她再看电影有下雨，她说“天啊，下雨了，我的衣服在外面”。 我跟她说 ”妹有下雨。现在很晴。“。 我门一起笑。</p>
+
+                
+            </div>
+        </div>
+
+        <div class="w3-row w3-panel">
+            <div class="w3-container w3-cell w3-mobile w3-cell-middle" style="width: 50%">
+                <p></p>
+            </div>
+
+
+            <div class="w3-container w3-cell w3-mobile" style="width: 50%">
+                <img class="w3-image" src="" />
+            </div>
+        </div>
+
+        <div class="w3-row w3-panel">
+            <div class="w3-container w3-cell w3-mobile" style="width: 50%">
+                <img src="" class="w3-image"/>
+            </div>
+            <div class="w3-container w3-cell w3-mobile w3-cell-middle" style="width: 50%">
+                <p></p>
+            </div>
+        </div>
+
+        <div class="w3-row w3-panel">
+
+
+            <div class="w3-container w3-cell w3-mobile w3-cell-middle" style="width: 50%">
+                <p>
+                </p>
+            </div>
+
+
+
+            <div class="w3-container w3-cell w3-mobile" style="width: 50%">
+                <img src="" class="w3-image"/>
+            </div>
+
+
+
+        </div>
+
+        <div class="w3-row w3-panel">
+            <div class="w3-container w3-cell w3-mobile" style="width: 50%"> 
+                <img class="w3-image" src="" />
+            </div>
+            <div class="w3-container w3-cell w3-mobile w3-cell-middle" style="width: 50%">
+                <p>
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+    </p>
+
+
+
+
+
+
+    <script src="//mandarinspot.com/static/mandarinspot.min.js" charset="UTF-8"></script>
+    <script>
+        mandarinspot.annotate('#chinesetext', {
+            phonetic: 'pinyin',
+            show: true,
+            inline: true,
+        });
+    </script>
+
+    <script>
+        function togglePhonetics() {
+            //alert("inside my function");
+            var element = document.getElementById("btn_toggle_phonetics");
+            let btnValue = element.value;
+            const showPinyinText = "Show PinYin";
+            const hidePinyinText = "Hide PinYin";
+
+            //alert("button value is " + btnValue);
+
+
+            if (btnValue === showPinyinText) {
+                element.value = hidePinyinText;
+                mandarinspot.showInline("visible");
+            } else {
+                element.value = showPinyinText;
+                mandarinspot.showInline("hidden");
+            }
+
+
+        }
+    </script>
+
+</body>
+</body>
+
+</html>
