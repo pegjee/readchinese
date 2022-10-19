@@ -1,0 +1,146 @@
+<html>
+<title>read chinese</title>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-amber.css">
+    <link rel="stylesheet" href="src/app.css">
+
+</head>
+
+
+
+<body>
+
+
+
+    <p>
+    <div class="w3-container">
+        <input type="button" id="btn_toggle_phonetics" class="w3-btn w3-amber w3-round-large" onclick=togglePhonetics()
+            value="Hide PinYin" />
+
+    </div>
+    <div id="chinesetext" class="w3-panel w3-card-4 chinesestyle"
+        style="width:60%;align-content: center;margin-left: auto;margin-right: auto;">
+        <div class="w3-row w3-panel">
+            <div class="w3-amber" style="text-align: center;">
+                <h1>两个姐妹</h1>
+            </div>
+        </div>
+        <div class="w3-row w3-panel">
+            <div class="w3-container w3-cell w3-mobile" style="width: 50%">
+                <img class="w3-image" src="../images/banana.jpg" />
+            </div>
+
+            <div class="w3-container w3-cell w3-mobile w3-cell-middle" style="width: 50%">
+
+
+                <p>有一个小猴子住在山洞里。它得名字是小红。它不喜欢吃香蕉应为它害怕黄色的东西。它的朋友觉得它很奇怪， 它们称他为懦夫。它喜欢吃录色的食物。每天它出去找东西吃，它不跟别的猴子。</p>
+
+                <p>有一天，所有它的朋友去了找香蕉在森林的北边，小红去了森林的南边。晚上的时候它的朋友还不回来。小红去睡觉。它起床的时候， 别的猴子还不在。
+                  小红很担心。”它门在哪儿呢？“ 它自己问。"好吧， 我去找它们。“
+                </p>
+                <p>小红跳起来，拿了一些水果和石头。它向北走去。走了几个小时后, 他看到河边地上有一些香蕉皮. 他害怕黄色的香蕉皮. 应为它害怕，它不敢去河边。它爬树跟随那个香蕉皮。</p>
+            </div>
+        </div>
+
+        <div class="w3-row w3-panel">
+            <div class="w3-container w3-cell w3-mobile w3-cell-middle" style="width: 50%">
+                <p>走了几个小时后，它看见它的朋友！有一个黄色的妖怪抓住了他们!</p>
+            </div>
+
+
+            <div class="w3-container w3-cell w3-mobile" style="width: 50%">
+                <img class="w3-image" src="../images/littlered.jpg" />
+            </div>
+        </div>
+
+        <div class="w3-row w3-panel">
+            <div class="w3-container w3-cell w3-mobile" style="width: 50%">
+                <img src="../images/yellowghost.jpg" class="w3-image" />
+            </div>
+            <div class="w3-container w3-cell w3-mobile w3-cell-middle" style="width: 50%">
+                <p>小红不怕妖怪， 但是它害怕黄色。“啊！我有办法！” 小红自己说。小红那一些葡萄， 然后它爬去近妖怪的树。他把葡萄汁滴在妖怪。黄色的妖怪变成录色！</p>
+            </div>
+        </div>
+
+        <div class="w3-row w3-panel">
+
+
+            <div class="w3-container w3-cell w3-mobile w3-cell-middle" style="width: 50%">
+                <p>现在小红不怕那个妖怪了。它跳了下来。它用他的石头杀那个妖怪。
+                </p>
+            </div>
+
+
+
+            <div class="w3-container w3-cell w3-mobile" style="width: 50%">
+                <img src="../images/blueghost.jpg" class="w3-image" />
+            </div>
+
+
+
+        </div>
+
+        <div class="w3-row w3-panel">
+            <div class="w3-container w3-cell w3-mobile" style="width: 50%">
+                <img class="w3-image" src="../images/monkeys.jpg" />
+            </div>
+            <div class="w3-container w3-cell w3-mobile w3-cell-middle" style="width: 50%">
+                <p>从那天，它们再也没有称他为懦夫。
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+    </p>
+
+
+
+
+
+
+    <script src="//mandarinspot.com/static/mandarinspot.min.js" charset="UTF-8"></script>
+    <script>
+        mandarinspot.annotate('#chinesetext', {
+            phonetic: 'pinyin',
+            show: true,
+            inline: true,
+        });
+    </script>
+
+    <script>
+        function togglePhonetics() {
+            //alert("inside my function");
+            var element = document.getElementById("btn_toggle_phonetics");
+            let btnValue = element.value;
+            const showPinyinText = "Show PinYin";
+            const hidePinyinText = "Hide PinYin";
+
+            //alert("button value is " + btnValue);
+
+
+            if (btnValue === showPinyinText) {
+                element.value = hidePinyinText;
+                mandarinspot.showInline("visible");
+            } else {
+                element.value = showPinyinText;
+                mandarinspot.showInline("hidden");
+            }
+
+
+        }
+    </script>
+
+</body>
+</body>
+
+</html>
